@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBAction func btnClick(_ sender: Any) {
         if let age = oldField.text {
-            label.text = "You are dog is " + age + " years old"
+            if let Ages = Int(age) {
+                let AgesinYears = Ages * 7
+                label.text = "You are dog is " + String(AgesinYears) + " years old"
+            }
+            
+            
         }
     }
     override func viewDidLoad() {
